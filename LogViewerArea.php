@@ -121,7 +121,7 @@ class LogViewerArea
 
 	public  static function parseLine(string $line) : array
 	{
-		$l = Str::match($line, '/^\[(?P<time>[\d\.]*\s[\d\:]*)\]\s(?P<sev>\w+)\s(?P<content>[\s\S]*)$/s');
+		$l = Str::match($line, '/^\[(?P<time>[\d\:\.\- \/]+)\]\s(?P<sev>\w+)\s(?P<content>[\s\S]*)$/s');
 		if (is_null($l)) {
 			return [
 				'time' => null,
