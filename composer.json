@@ -2,7 +2,7 @@
 	"name": "adamkiss/kirby-log-viewer",
 	"description": "Log Viewer is a panel area for Kirby CMS displaying (parsed and highlighted) log files",
 	"type": "kirby-plugin",
-	"version": "0.1",
+	"version": "0.2.1",
 	"license": "MIT",
 	"authors": [
 		{
