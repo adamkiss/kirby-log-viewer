@@ -1,0 +1,28 @@
+{
+	"name": "adamkiss/kirby-log-viewer",
+	"description": "Log Viewer is a panel area for Kirby CMS displaying (parsed and highlighted) log files",
+	"type": "kirby-plugin",
+	"version": "0.1",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Adam Kiss",
+			"email": "hello@adamkiss.com"
+		}
+	],
+	"keywords": [
+		"kirby",
+		"kirby-cms",
+		"kirby-plugin"
+	],
+	"require": {
+		"php": ">=8.2.0",
+		"getkirby/composer-installer": "^1.1",
+		"scrivo/highlight.php": "^9.18"
+	},
+	"config": {
+		"allow-plugins": {
+			"getkirby/composer-installer": true
+		}
+	}
+}

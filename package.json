@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "kirbyup serve src/log-viewer.js; kirbyup src/log-viewer.js",
+    "build": "kirbyup src/log-viewer.js"
+  },
+  "devDependencies": {
+    "kirbyup": "^3.1.6"
+  }
+}
