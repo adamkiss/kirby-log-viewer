@@ -1,5 +1,5 @@
 <template>
-	<k-inside>
+	<k-panel-inside>
 		<k-header>
 			<span class="inline-flex gap-2 items-baseline">
 				<span>Logy: {{ log?.range }}</span>
@@ -27,7 +27,7 @@
 				</div>
 			</k-input>
 		</div>
-	</k-inside>
+	</k-panel-inside>
 </template>
 
 <style scoped>
