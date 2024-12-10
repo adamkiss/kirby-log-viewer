@@ -6,7 +6,6 @@
 				<time class="text-base opacity-70 align-right">{{ currtime }}</time>
 			</span>
 
-
 			<div slot="buttons">
 				<k-input
 					:options="picklist"
@@ -76,26 +75,28 @@
 	text-align: right;
 }
 
-[class^='sev-'] > * {
-	mix-blend-mode: multiply;
-}
-
-[class^='sev-'] > time:nth-of-type(n+2) {
-	color: var(--color-gray-500);
-}
-
-[class^='sev-'] .punc {
-	color: var(--color-gray-500);
-}
-[class^='sev-'] .sev {
-	font-weight: bold;
-}
 [class^='sev-'] .tag {
-	border: 1px solid var(--color-gray-400);
 	padding: 0.2rem;
 	border-radius: 3px;
 }
 
+[class^='sev-'] .sev {
+	font-weight: bold;
+}
+
+
+[class^='sev-'] > * {
+	mix-blend-mode: multiply;
+}
+[class^='sev-'] > time:nth-of-type(n+2) {
+	color: var(--color-gray-500);
+}
+[class^='sev-'] .punc {
+	color: var(--color-gray-500);
+}
+[class^='sev-'] .tag {
+	border: 1px solid var(--color-gray-400);
+}
 .sev.sev-debug { color: #999; }
 .sev.sev-info { color: var(--color-blue-700); }
 .sev.sev-notice { color: var(--color-purple-700); }
@@ -108,6 +109,35 @@
 [hl] { color: #666; }
 [hl] .hljs-attr { color: var(--color-blue-800); }
 [hl] .hljs-string, [hl] .hljs-number { color: var(--color-purple-800); }
+
+@media screen and (prefers-color-scheme: dark) {
+	[class^='sev-'] > * {
+		mix-blend-mode: lighten;
+	}
+	[class^='sev-'] > time:nth-of-type(n+2) {
+		color: var(--color-gray-500);
+	}
+	[class^='sev-'] .punc {
+		color: var(--color-gray-500);
+	}
+	[class^='sev-'] .tag {
+		border: 1px solid var(--color-gray-600);
+	}
+	.sev.sev-debug { color: #999; }
+	.sev.sev-info { color: var(--color-blue-300); }
+	.sev.sev-notice { color: var(--color-purple-300); }
+	.sev.sev-warning { color: var(--color-orange-300); }
+	.sev.sev-error { color: var(--color-red-300); }
+
+	.sev-info { background: hsla(var(--color-blue-hs), var(--color-l-600), .05); }
+	.sev-notice { background: hsla(var(--color-purple-hs), var(--color-l-600), .05); }
+	.sev-warning { background: hsla(var(--color-orange-hs), var(--color-l-600), .05); }
+	.sev-error { background: hsla(var(--color-red-hs), var(--color-l-600), .2); }
+
+	[hl] { color: #ccc; }
+	[hl] .hljs-attr { color: var(--color-blue-300); }
+	[hl] .hljs-string, [hl] .hljs-number { color: var(--color-purple-300); }
+}
 </style>
 
 <script>
