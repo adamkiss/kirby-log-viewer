@@ -21,8 +21,8 @@
 		<div v-for="([d, lines]) in logs" :key="d" class="mb-8">
 			<h2 class="text-2xl mb-4">{{ d }}</h2>
 			<k-input class="block w-full">
-				<div class="w-full overflow-x-scroll" v-for="(line, j) in lines" :key="j">
-					<pre v-html="line.content" :class="line.class"></pre>
+				<div class="w-full overflow-x-scroll" :class="line.class" v-for="(line, j) in lines" :key="j">
+					<pre v-html="line.content"></pre>
 				</div>
 			</k-input>
 		</div>
