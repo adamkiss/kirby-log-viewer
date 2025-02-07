@@ -2,7 +2,7 @@
 	<k-panel-inside>
 		<k-header>
 			<span class="inline-flex gap-2 items-baseline">
-				<span>Logy: {{ log?.range }}</span>
+				<span>{{ log?.range }}</span>
 				<time class="text-base opacity-70 align-right">{{ currtime }}</time>
 			</span>
 
@@ -177,7 +177,7 @@ export default {
 	},
 	mounted() {
 		setInterval(() => {
-			this.currtime = this.$library.dayjs().format('D.MM.YY HH:mm:ss')
+			this.currtime = this.$library.dayjs().format('D.MM. HH:mm:ss')
 		}, 1000);
 	},
 	methods: {
