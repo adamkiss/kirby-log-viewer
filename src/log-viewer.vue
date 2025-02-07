@@ -22,7 +22,7 @@
 			<h2 class="text-2xl mb-4">{{ d }}</h2>
 			<k-input class="block w-full">
 				<div class="w-full overflow-x-scroll" :class="line.class" v-for="(line, j) in lines" :key="j">
-					<pre v-html="line.content"></pre>
+					<pre v-html="line.content" class="overflow-auto"></pre>
 				</div>
 			</k-input>
 		</div>
@@ -73,6 +73,15 @@
 }
 .align-right {
 	text-align: right;
+}
+.w-full {
+	width: 100%;
+}
+.overflow-x-scroll {
+	overflow-x: scroll;
+}
+.overflow-auto {
+	overflow: auto;
 }
 
 [class^='sev-'] .tag {
@@ -177,7 +186,7 @@ export default {
 	},
 	mounted() {
 		setInterval(() => {
-			this.currtime = this.$library.dayjs().format('D.MM. HH:mm:ss')
+			this.currtime = this.$library.dayjs().format('DD.MM. HH:mm:ss')
 		}, 1000);
 	},
 	methods: {

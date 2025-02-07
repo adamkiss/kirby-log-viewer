@@ -66,7 +66,7 @@ class LogViewerArea
 			$start = new Date(str_replace('-', 'W', $name) . '1', option('adamkiss.kirby-log-viewer.timezone', new \DateTimeZone('Europe/Bratislava')));
 			$end = new Date(str_replace('-', 'W', $name) . '7', option('adamkiss.kirby-log-viewer.timezone', new \DateTimeZone('Europe/Bratislava')));
 			$range = sprintf(
-				'%s - %s',
+				'%s—%s',
 				$start->format('d.m.'),
 				$end->format('d.m.Y')
 			);
