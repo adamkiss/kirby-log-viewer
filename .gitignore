@@ -1,3 +1,6 @@
+# Dev files
+/index.dev.mjs
+
 # OS files
 .DS_Store
 
