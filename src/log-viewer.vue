@@ -67,8 +67,19 @@
 .opacity-70 {
 	opacity: 0.7;
 }
-.text-2xl {
-	font-size: 1.875rem;
+.space-y-8 > * + * {
+	margin-top: 2rem;
+}
+.mb-8 {
+	margin-bottom: 2rem;
+}
+.text-xl {
+	font-size: 1.25rem;
+}
+.sm\:text-2xl {
+	@media (min-width: 640px) {
+		font-size: 1.5rem;
+	}
 }
 .mb-4 {
 	margin-bottom: 1rem;
