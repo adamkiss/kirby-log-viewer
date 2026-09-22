@@ -38,8 +38,20 @@ class LogViewerArea {
 
 	public static function view(?string $week = null): array {
 		$all = self::all();
-		$week ??= A::first($all)['name'];
+		if (count($all) === 0) {
+			return [
+				'component' => 'ak-log-viewer',
+				'props' => [
+					'log' => null,
+					'content' => [],
+					'all' => [],
+					'empty' => true,
+				],
+			];
+		}
 
+
+		$week ??= A::first($all)['name'];
 		$log = $all[$week];
 
 		$content = F::read(kirby()->root('logs') . '/' . $log['file']);

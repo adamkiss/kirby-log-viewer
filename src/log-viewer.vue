@@ -8,6 +8,7 @@
 
 			<div slot="buttons">
 				<k-input
+				 	v-if="!empty"
 					:options="picklist"
 					:value="log?.name"
 					:required="true"
@@ -18,7 +19,7 @@
 			</div>
 		</k-header>
 
-		<div class="space-y-8 mb-8">
+		<div class="space-y-8 mb-8" v-if="!empty">
 			<div v-for="([d, lines]) in logs" :key="d">
 				<h2 class="text-xl sm:text-2xl mb-4">{{ d }}</h2>
 				<k-input class="block w-full">
@@ -28,6 +29,10 @@
 				</k-input>
 			</div>
 		</div>
+		<div v-else class="empty-state">
+			No logs available.
+		</div>
+
 	</k-panel-inside>
 </template>
 
@@ -160,6 +165,20 @@
 	[hl] .hljs-attr { color: var(--color-blue-300); }
 	[hl] .hljs-string, [hl] .hljs-number { color: var(--color-purple-300); }
 }
+
+.empty-state {
+	text-align: center;
+
+	background: light-dark(var(--color-gray-100), var(--color-gray-850));
+	border: 1px solid light-dark(var(--color-gray-500), var(--color-gray-600));
+	border-radius: var(--rounded-xl);
+	padding-block: var(--spacing-36);
+
+	font-size: var(--text-2xl);
+	font-weight: var(--font-thin);
+
+	opacity: var(--opacity-disabled);
+}
 </style>
 
 <script>
@@ -168,6 +187,10 @@ export default {
 		all: Object,
 		log: Object,
 		content: Object,
+		empty: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	data() {
 		return {
