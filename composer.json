@@ -23,5 +23,11 @@
 		"allow-plugins": {
 			"getkirby/composer-installer": true
 		}
+	},
+	"require-dev": {
+		"getkirby/cms": "^5.6"
+	},
+	"extra": {
+		"kirby-cms-path": false
 	}
 }
