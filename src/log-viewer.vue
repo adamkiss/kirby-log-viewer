@@ -54,6 +54,20 @@
 .k-input div:not(:last-child) pre {
 	border-bottom: 1px solid var(--input-color-border);
 }
+
+.empty-state {
+	text-align: center;
+
+	background: light-dark(var(--color-gray-100), var(--color-gray-850));
+	border: 1px solid light-dark(var(--color-gray-500), var(--color-gray-600));
+	border-radius: var(--rounded-xl);
+	padding-block: var(--spacing-36);
+
+	font-size: var(--text-2xl);
+	font-weight: var(--font-thin);
+
+	opacity: var(--opacity-disabled);
+}
 </style>
 
 <style>
@@ -164,20 +178,6 @@
 	[hl] { color: #ccc; }
 	[hl] .hljs-attr { color: var(--color-blue-300); }
 	[hl] .hljs-string, [hl] .hljs-number { color: var(--color-purple-300); }
-}
-
-.empty-state {
-	text-align: center;
-
-	background: light-dark(var(--color-gray-100), var(--color-gray-850));
-	border: 1px solid light-dark(var(--color-gray-500), var(--color-gray-600));
-	border-radius: var(--rounded-xl);
-	padding-block: var(--spacing-36);
-
-	font-size: var(--text-2xl);
-	font-weight: var(--font-thin);
-
-	opacity: var(--opacity-disabled);
 }
 </style>
 
